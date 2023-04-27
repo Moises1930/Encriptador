@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/logo_ico.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador </title>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo.webp" alt="logo">
+        <section class="enter">
+    </header>
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <p id="mensaje"></p>
+        </div>
+    </div>
+    <section class="enter">
+        <textarea placeholder="Ingrese el texto aqui"></textarea>
+    </section>
+    <div class="opciones">
+        <label><img src="Images/bi_exclamation-circle-fill.webp" alt="exclamacion"> Solo letras minúsculas y sin acentos.</label>
+        <button id="btn-encriptar">Encriptar</button>
+        <button id="btn-desencriptar">Desencriptar</button>
+        </div>
+    </section>
+    <section class="rectangulo">
+        <img src="Images/Muneco.webp" alt="Muneco">
+        <ul>
+            <li>Ningún mensaje fue encontrado</li>
+            <li>Ingresa el texto que desees encriptar o desencriptar.</li>
+        </ul>
+        <div>
+            <label>Click en el rectangulo para copiar.</label>
+        </div>
+    </section>
+    <footer>
+        <label>Creado por: Jose Moises Palacios de Jesus</label>
+        <a href="https://github.com/Moises1930" target="_blank"><img src="Images/github-logo_icon.ico" alt="log-git"></a>
+    </footer>
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>

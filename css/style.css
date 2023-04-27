@@ -1,0 +1,195 @@
+body{
+    background: #E5E5E5;
+    display: grid;
+    width: 99vw;
+    height: 97vh;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 0px;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contenido{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 5%;
+}
+.cerrar{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar:hover, .cerrar:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+*{
+    caret-color: transparent;
+}
+/* Encabezado */
+header{
+    grid-area: 1 / 1 / 3 / 8;
+    padding: 2%;
+}
+/* Rectangulo con imagen y texto*/
+.rectangulo{
+    grid-area: 1 / 8 / 10 / 11;
+    background: #FFFFFF;
+    margin: 3%;
+    border-radius: 20px;
+    border: 1px solid #0A3871;
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+    display: grid;
+    align-items: center;
+}
+.rectangulo > *{
+    margin: 1em;
+}
+.rectangulo img{
+    width: 80%;
+    display: block;
+    margin: 5% auto;
+}
+.rectangulo ul{
+    width: auto;
+    padding: 0%;
+    overflow: auto;
+}
+.rectangulo li{
+    text-align: center;
+    margin: 1em .75em;
+    margin-bottom: 1em;
+}
+.rectangulo li:first-child{
+    font-weight: bold;
+}
+.rectangulo div{
+    height: 80%;
+    display: flex;
+    margin-bottom: 0;
+    align-items: flex-end;
+}
+.rectangulo label{
+    color: #0A3871;
+    cursor: pointer;
+    visibility: hidden;
+}
+/* Zona del input */
+.enter{
+    grid-area: 2 / 1 / 7 / 8;
+    padding: 2%;
+}
+.enter textarea{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    background: transparent;
+    font-size: 1.3em;
+    resize: none;
+    border: none;
+    caret-color: #0A3871;
+}
+.enter textarea::placeholder{
+    color: #0A3871;
+}
+.enter textarea:focus{
+    outline: none;
+}
+/* Botones */
+.opciones{
+    grid-area: 7 / 1 / 10 / 8;
+    text-align: center;
+}
+.opciones label{
+    text-align: left;
+    color: #65747D;
+    margin: 3% 2% 0;
+    display: block;
+}
+.opciones button{
+    width: 30%;
+    height: 30%;
+    margin: 5%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#btn-encriptar{
+    color: #FFFFFF;
+    background: #0A3871;
+}
+#btn-encriptar:active{
+    color: #0A3871;
+    background: #D8DFE8;
+}
+#btn-desencriptar{
+    color: #0A3871;
+    background: #D8DFE8;
+}
+#btn-desencriptar:active{
+    color: #FFFFFF;
+    background: #0A3871;
+}
+/* Footer*/
+footer{
+    grid-area: 10 / 1 / 11 / 11;
+    display: flex;
+    color: #0A3871;
+    font-weight: bold;
+    align-items: end;
+    padding: 1% 1%;
+}
+footer img{
+    margin-left: 10px;
+    width: 25px;
+}
+@media screen and (max-width: 1024px){
+    body{
+        width: 95vw;
+        height: 100vh;
+    }
+    .modal-contenido{
+        width: 20%;
+    }
+    header{
+        grid-area: 1 / 1 / 2 / 11;
+        display: flex;
+        align-items: center;
+    }
+    .rectangulo{
+        grid-area: 7 / 1 / 10 / 11;
+    }
+    .rectangulo img{
+        display: none;
+        visibility: none;
+    }
+    .enter{
+        grid-area: 2 / 1 / 5 / 11;
+    }
+    .opciones{
+        grid-area: 5 / 1 / 7 / 11;
+    }
+    footer{
+        grid-area: 10 / 1 / 11 / 11;
+    }
+}
+@media screen and (max-width: 480px){
+    .opciones button{
+        width: 30%;
+        height: 50%;
+    }
+}
